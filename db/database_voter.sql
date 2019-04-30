@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 26, 2019 at 08:37 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Host: localhost
+-- Generation Time: Apr 30, 2019 at 02:41 PM
+-- Server version: 8.0.15
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -40,17 +42,21 @@ CREATE TABLE `pilihan` (
 --
 
 CREATE TABLE `tabel_admin` (
-  `id_user` int(12) NOT NULL,
+  `id_admin` int(12) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `nama` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL
+  `password` varchar(60) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tabel_admin`
 --
 
-INSERT INTO `tabel_admin` (`id_user`, `nama`, `password`) VALUES
-(1234, 'admin', '1234');
+INSERT INTO `tabel_admin` (`id_admin`, `username`, `nama`, `password`) VALUES
+(1234, '', 'admin', '1234'),
+(145790, 'dude', 'Yogi K', '$2y$10$1ZJy0vIeb4tv9F7zdx404ejbUx8pyIInAm1ZgRhNPV0xjzxwlt9yO'),
+(967321, 'dhani', 'dhani', '$2y$10$lTwQ2bwgIWOARWGrVhC9/uFXMD1El/i8Rbm3oFfaStOmlH9o2lCrW'),
+(489031, 'root', 'GROOT', '$2y$10$ZVdV5KYxD.l7gyCfQEfeV.7JNukjYk3QYBlHyxoOnfTdPED65zwgO');
 
 -- --------------------------------------------------------
 
@@ -90,6 +96,7 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `pilihan`
   ADD PRIMARY KEY (`id_pilihan`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
