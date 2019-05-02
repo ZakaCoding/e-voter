@@ -35,18 +35,18 @@
       </div>
       <div class="row">
         <div class="col-sm-8">
-          <form>
+          <form action="function/f_pilihan.php" method="post">
             <div class="form-group">
               <label for="inputEmail4">ID Pemilihan</label>
               <input type="number" class="form-control" id="inputEmail4" placeholder="Masukan ID Pemilihan" name="id_pemilihan" required>
             </div>
             <div class="form-group">
               <label for="inputAddress2">Password</label>
-              <input type="password" class="form-control" id="inputAddress2" placeholder="Type password here" required>
+              <input type="password" class="form-control" id="inputAddress2" placeholder="Type password here" name="password" required>
             </div>
             <div class="center">
               <div class="btn-gradient">
-                <button type="submit" class="btn btn-default">Masuk</button>
+                <button type="submit" class="btn btn-default" name="masuk">Masuk</button>
               </div>
               <div class="btn-gradient">
                 <button type="reset" class="btn btn-default" href="main.php">Batal</button>

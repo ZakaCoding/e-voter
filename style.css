@@ -103,3 +103,15 @@ header h3 {
 .color-default {
   background: linear-gradient(to left, #8d0645 0%, #8f130f 100%);
 }
+.a-vote {
+  display: block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  background-color: whitesmoke;
+  font-size: 18pt;
+}
+.a-vote:hover {
+  text-decoration: none;
+}

@@ -43,6 +43,10 @@
               {
                 include_once "v_vote.php";
               }
+              else if($_GET['menu'] === "vote")
+              {
+                include_once "v_vote_all.php";
+              }
             }
             else
             {

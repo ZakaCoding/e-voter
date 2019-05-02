@@ -26,7 +26,7 @@
     // Create session login
     $_SESSION['admin'] = [
       "login" => true,
-      "id_admin" => $user['id'],
+      "id_admin" => $user['id_admin'],
       "name" => $user['nama']
     ];
 
